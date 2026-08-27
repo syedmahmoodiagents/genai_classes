@@ -8,8 +8,9 @@ async def main():
         tools = await client.list_tools()
         print("Tools:", tools)
 
+        query="Python programming language"
         result = await client.call_tool(
-            "search_wikipedia", {"query": "tell me about the history of the internet"}
+            "search_wikipedia", {"query": query}
         )
         print("Result:", result)
 
